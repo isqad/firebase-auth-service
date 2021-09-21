@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "github.com/live-look/multichat-auth/pkg/service";
+
+message Token {
+  string token = 1;
+  optional string user_id = 2;
+}
+
+service Auth {
+  rpc Verify(Token) returns (Token) {}
+}
