@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/live-look/multichat-auth/pkg/service"
+	"github.com/isqad/firebase-auth-service/pkg/service"
 	"github.com/urfave/cli/v2"
 )
 

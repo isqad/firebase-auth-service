@@ -1,4 +1,4 @@
-module github.com/live-look/multichat-auth
+module github.com/isqad/firebase-auth-service
 
 go 1.17
 
