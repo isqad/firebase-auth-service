@@ -3,7 +3,7 @@ module github.com/isqad/firebase-auth-service
 go 1.17
 
 require (
-	github.com/golang-jwt/jwt/v4 v4.0.0
+	github.com/golang-jwt/jwt/v4 v4.1.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/urfave/cli/v2 v2.3.0
 	google.golang.org/grpc v1.41.0
