@@ -1,6 +1,6 @@
-<h1 align="center">Firebase JWT grpc-auth service</h1>
+<h1 align="center">Grpc-service for Firebase JWTs authentication</h1>
 
-Grpc-service for verification of the Firebase JWTs
+Grpc-service for verification and authentication of Firebase JWTs
 
 # Usage
 
