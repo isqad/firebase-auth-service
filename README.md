@@ -1,5 +1,7 @@
 <h1 align="center">Grpc-service for Firebase JWTs authentication</h1>
 
+[![Go](https://github.com/isqad/firebase-auth-service/actions/workflows/go.yml/badge.svg)](https://github.com/isqad/firebase-auth-service/actions/workflows/go.yml)
+
 Grpc-service for verification and authentication of Firebase JWTs
 
 # Usage
