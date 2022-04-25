@@ -48,17 +48,48 @@ func (s *UsersAPIServer) Start() error {
 }
 ```
 
-2) Build and run the service:
+2) Run the service:
 
 ```bash
-docker build -t your-name:firebase-auth-service:0.1.0 .
-```
-
-```bash
-docker run --rm -d -p 50053:50053 --name firebase-auth-service your-name:firebase-auth-service your-name:firebase-auth-service:0.1.0
+docker run -d -p 50053:50053 --name firebase-auth-service isqad88/firebase-auth-service:0.1.0
 ```
 
 3) Run your grpc-service.
+4) Verify your JWTs from firebase auth:
+
+```go
+// Example
+
+import (
+  // Some imports...
+  firebase "github.com/isqad/firebase-auth-service/pkg/service"
+  // Other imports...
+)
+
+func someHandler(w http.ResponseWriter, r *http.Request) {
+  // Extract token from request:
+  token := r.Header.Get("X-Auth-Token")
+
+  conn, err := grpc.Dial(m.Addr, []grpc.DialOption{
+      grpc.WithInsecure(),
+      grpc.WithBlock(),
+  }...)
+  if err != nil {
+      authFailed(w, r, err)
+      return
+  }
+  defer conn.Close()
+
+  authClient := firebase.NewAuthClient(conn)
+  ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+  defer cancel()
+
+  t, err := authClient.Verify(ctx, &firebase.Token{Token: token})
+  if err != nil {
+      m.authFailed(w, r, err)
+      return
+  }
+```
 
 # Roadmap
 
