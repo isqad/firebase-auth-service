@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/golang-jwt/jwt/v4 v4.4.1
 	github.com/sirupsen/logrus v1.8.1
-	github.com/urfave/cli/v2 v2.4.8
+	github.com/urfave/cli/v2 v2.5.1
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
 )
