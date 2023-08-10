@@ -1,4 +1,4 @@
-FROM golang:1.20.3-buster AS compile
+FROM golang:1.20.5-buster AS compile
 
 WORKDIR /build
 
