@@ -1,13 +1,15 @@
 module github.com/isqad/firebase-auth-service
 
-go 1.17
+go 1.21
+
+toolchain go1.23.2
 
 require (
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/urfave/cli/v2 v2.25.1
 	google.golang.org/grpc v1.54.0
-	google.golang.org/protobuf v1.30.0
+	google.golang.org/protobuf v1.35.1
 )
 
 require (
